@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple CSV Dictionary</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- PapaParse for robust CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <h1 class="title">Dictionary</h1>
+
+    <form id="searchForm" onsubmit="return false;">
+      <input id="searchInput" placeholder="Type a word and press Enter" autocomplete="off" />
+      <button id="searchBtn" type="button">Search</button>
+    </form>
+
+    <div id="results" class="results" aria-live="polite">
+      <p class="hint">Search for a word above — results will appear here.</p>
+    </div>
+
+    <footer class="footer">Data: <code>data.csv</code> · Built with plain HTML/JS</footer>
+  </main>
+</body>
+</html>

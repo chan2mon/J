@@ -1,0 +1,30 @@
+:root{
+  --bg:#f5f7fb; --card:#ffffff; --accent:#0b63d6; --muted:#6b7280;
+  --radius:12px;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:grid; place-items:center;
+  background:linear-gradient(180deg, #eef3fb, var(--bg));
+  padding:28px;
+}
+.card{
+  width:100%; max-width:760px; background:var(--card); border-radius:var(--radius);
+  padding:28px; box-shadow:0 8px 30px rgba(13,20,39,0.08);
+}
+.title{margin:0 0 12px; font-size:28px; color:#0f1724}
+form{display:flex; gap:8px; margin-bottom:18px}
+#searchInput{
+  flex:1; padding:12px 14px; border-radius:10px; border:1px solid #e6e9ef; font-size:16px;
+  outline:none;
+}
+#searchInput:focus{box-shadow:0 0 0 4px rgba(11,99,214,0.08); border-color:var(--accent)}
+button{padding:10px 14px; border-radius:10px; border:none; background:var(--accent); color:white; cursor:pointer}
+button:active{transform:translateY(1px)}
+.results .item{padding:12px; border-bottom:1px dashed #eef2ff}
+.results .word{font-weight:700; font-size:18px}
+.results .pos{color:var(--muted); font-size:13px; margin-left:8px}
+.results .def{margin-top:6px; color:#111827}
+.hint{color:var(--muted)}
+.footer{margin-top:14px; font-size:13px; color:var(--muted)}
